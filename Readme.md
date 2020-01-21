@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей Пронин](https://up.htmlacademy.ru/htmlcss/27/user/1235413).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
