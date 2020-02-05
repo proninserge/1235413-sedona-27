@@ -1,0 +1,473 @@
+/* Common Styles */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;  
+}
+
+.container {
+  text-align: center;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.big-characters {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+/* Header */
+.header {  
+  background-color: #ffffff;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0,0,0, 0.3);
+}
+
+a.active-page {
+  color: #766357;
+}
+
+/* Main */
+.index-greeting {  
+  background-image: url("../img/top-background-photo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.index-greeting div:first-child {
+  background-image: url("../img/intro-mask.svg");
+  background-position: bottom center; 
+  background-repeat: no-repeat;
+}
+
+.index-mask {
+  background-color: #ffffff;
+}
+
+.open-form {
+  background-color: #ffffff;
+}
+
+.interested {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.hotels-list {
+  background-color: #ffffff;
+}
+
+/* Filter Section */
+.filter-section {
+  background-image: url("../img/filter-background.jpg");
+  background-position: top center; 
+  background-repeat: no-repeat;
+}
+
+.infrastructure,
+.accommodation,
+.price {
+  list-style: none;
+}
+
+.selection-form fieldset {
+  border: none;
+}
+
+.legend {
+  font-size: 16px;  
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+/* Checkbox Styles draft*/
+input[type="checkbox"] {  
+  -webkit-appearance: none;
+  -moz-appearance: none;  
+  -ms-appearance: none;  /* Does not work in IE11, while I'm trying to make the UI accessible. Edge is fine */
+  appearance: none;
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari & Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;   
+}
+
+.label {
+  margin-left: 5px;
+  display: inline-block;  
+  margin-top: -15px;  
+  vertical-align: middle;
+
+  color: #ffffff;
+}
+
+.checkbox-svg {
+  margin-left: -25px;
+}
+
+.not-checked {
+  visibility: visible;
+}
+
+.is-checked {
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + svg > .not-checked {  
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked + svg > .is-checked {
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled + svg > .not-checked {
+  fill: #6a6a6a;
+}
+
+input[type="checkbox"]:disabled + svg > .is-checked {
+  fill: #6a6a6a;
+}
+
+/* Filter Button */
+.filter-button {
+  font: inherit;
+
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.filter-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Filter Inputs */
+.filter-input {
+  font: inherit;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+}
+
+/* Sorting Section */
+.sorting {
+  background-color: #ffffff;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting p:nth-child(2) {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-list a {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0,0,0, 0.3);
+  border-bottom: 1px dotted rgba(0,0,0, 0.3);
+}
+
+.sorting-list a:hover {
+  color: #81b3d2;
+  border-bottom-color: #81b3d2;
+}
+
+.sorting-list a:active {
+  border: none;
+  color: #000000;
+}
+
+a.active-sort {
+  border: none;
+  color: #81b3d2;
+}
+
+.sort-icon path {
+  fill: #cacaca;
+}
+
+.sort-icon:hover path {
+  fill: #231f20;
+}
+
+.sort-icon:active path {
+  fill: #81b3d2;
+}
+
+a.active-icon path {
+  fill: #81b3d2;
+}
+
+/* Links inside the Section */
+.hotels-list a:nth-child(2n-1) {
+  display: table-cell;
+  width: 110px;
+  height: 25px;
+
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;  
+  
+  background-color: #81b3d2;
+}
+
+.hotels-list a:nth-child(2n-1):hover {
+  background-color: #669ec0;
+}
+
+.hotels-list a:nth-child(2n-1):active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotels-list a:nth-child(2n) {
+  display: table-cell;
+  width: 140px;
+  height: 25px;
+
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;  
+  
+  background-color: #766357;
+}
+
+.hotels-list a:nth-child(2n):hover {
+  background-color: #604e43;
+}
+
+.hotels-list a:nth-child(2n):active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.rating {
+  display: table-cell;
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  vertical-align: middle;
+
+  color: #666666;
+  background-color: #f2f2f2;
+}
+
+/* Stars */
+.four-stars {  
+  width: 72px;
+  height: 17px;
+
+  background-image:  url("../img/star.svg");
+}
+
+.three-stars {
+  width: 54px;
+  height: 17px;
+
+  background-image:  url("../img/star.svg");
+}
+
+.two-stars {
+  width: 36px;
+  height: 17px;
+
+  background-image:  url("../img/star.svg");
+}
+
+/* Index Form */
+.book-btn {
+  font: inherit;
+
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #766357;
+  border: none;
+}
+
+.book-btn:hover {  
+  background-color: #604e43;  
+}
+
+.book-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;  
+}
+
+/* Index Form CSS code here */
+
+.search-btn {
+  font: inherit;
+
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+  border: none;
+}
+
+.search-btn:hover {
+  background-color: #669ec0;
+}
+
+.search-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd; 
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+}
+
+/* Social Hyperlinks */
+.socials {
+  list-style: none;
+}
+
+.socials a {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 48px;
+  
+  background-color: #81b3d2;
+}
+
+.socials a:hover {
+  background-color: #669ec0;
+}
+
+.socials a:active {
+  background-color: #5496bd;
+}
+
+.social-twitter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;    
+  background-image: url("../img/twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+.social-facebook::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+  background-image: url("../img/fb-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+  background-image: url("../img/youtube.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-twitter:active::before,
+.social-facebook:active::before,
+.social-youtube:active::before {
+  opacity: 0.3;
+}
+
+/* Copyright Logo */
+.copyright path,
+.copyright rect {
+  fill: #231f20;
+}
+
+.copyright:hover path,
+.copyright:hover rect {
+  fill: #81b3d2;
+}
+/* Active state does not work in IE */
+.copyright:active path,
+.copyright:active rect {
+  fill: #bdbbbc;
+}
