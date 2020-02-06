@@ -23,17 +23,17 @@ a {
 }
 
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0;
+  border:0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
-.big-characters {
+.important-content {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -59,7 +59,7 @@ a {
 }
 
 .site-navigation a:active {
-  color: rgba(0,0,0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 a.active-page {
@@ -73,10 +73,17 @@ a.active-page {
   background-repeat: no-repeat;
 }
 
-.index-greeting div:first-child {
-  background-image: url("../img/intro-mask.svg");
-  background-position: bottom center; 
-  background-repeat: no-repeat;
+.banner {
+  position: relative;
+}
+
+.banner::after {
+  content: url("../img/intro-mask.svg");
+  position: absolute;
+  width: 1200px;
+  height: 59px;
+  top: 300px;
+  left: 227px;  
 }
 
 .index-mask {
@@ -104,9 +111,7 @@ a.active-page {
   background-repeat: no-repeat;
 }
 
-.infrastructure,
-.accommodation,
-.price {
+.filter-list {
   list-style: none;
 }
 
@@ -122,30 +127,48 @@ a.active-page {
 }
 
 /* Checkbox Styles draft*/
-input[type="checkbox"] {  
+.checkbox {  /* Это правило доступно скрывает флаг чекбокса (взято из материалов HTML Academy) + увеличивает его область, чтобы она примерно соответствовала кастомному чекбоксу. Необходимо для доступности */
   -webkit-appearance: none;
   -moz-appearance: none;  
   -ms-appearance: none;  /* Does not work in IE11, while I'm trying to make the UI accessible. Edge is fine */
   appearance: none;
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari & Chrome */
-  -o-transform: scale(1.5); /* Opera */
-  transform: scale(1.5);
+  -ms-transform: scale(1.3); /* IE */
+  -moz-transform: scale(1.3); /* FF */
+  -webkit-transform: scale(1.3); /* Safari & Chrome */
+  -o-transform: scale(1.3); /* Opera */
+  transform: scale(1.3);
   padding: 10px;   
 }
 
+.filter-list li {
+  position: relative;
+  margin-bottom: 20px;
+  
+}
+
 .label {
-  margin-left: 5px;
-  display: inline-block;  
-  margin-top: -15px;  
+  position: absolute;
+  left: 42px;
+  margin-top: 1px;
+  display: inline-block;   
   vertical-align: middle;
 
   color: #ffffff;
+  
+}
+
+.label-cost {
+  color: #ffffff;
+}
+
+.checkbox {
+  margin-top: 2px;
+  margin-left: 2px;
 }
 
 .checkbox-svg {
-  margin-left: -25px;
+  position: absolute;
+  left: 0px;  
 }
 
 .not-checked {
@@ -156,19 +179,19 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
-input[type="checkbox"]:checked + svg > .not-checked {  
+.checkbox:checked + svg > .not-checked {  
   visibility: hidden;
 }
 
-input[type="checkbox"]:checked + svg > .is-checked {
+.checkbox:checked + svg > .is-checked {
   visibility: visible;
 }
 
-input[type="checkbox"]:disabled + svg > .not-checked {
+.checkbox:disabled + svg > .not-checked {
   fill: #6a6a6a;
 }
 
-input[type="checkbox"]:disabled + svg > .is-checked {
+.checkbox:disabled + svg > .is-checked {
   fill: #6a6a6a;
 }
 
@@ -211,7 +234,7 @@ input[type="checkbox"]:disabled + svg > .is-checked {
   list-style: none;
 }
 
-.sorting p:nth-child(2) {
+.sort-type {
   font-size: 12px;
   line-height: 18px;
 }
@@ -219,8 +242,8 @@ input[type="checkbox"]:disabled + svg > .is-checked {
 .sorting-list a {
   font-size: 12px;
   line-height: 18px;
-  color: rgba(0,0,0, 0.3);
-  border-bottom: 1px dotted rgba(0,0,0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
 }
 
 .sorting-list a:hover {
@@ -255,7 +278,7 @@ a.active-icon path {
 }
 
 /* Links inside the Section */
-.hotels-list a:nth-child(2n-1) {
+.more-info {
   display: table-cell;
   width: 110px;
   height: 25px;
@@ -268,16 +291,16 @@ a.active-icon path {
   background-color: #81b3d2;
 }
 
-.hotels-list a:nth-child(2n-1):hover {
+.more-info:hover {
   background-color: #669ec0;
 }
 
-.hotels-list a:nth-child(2n-1):active {
+.more-info:active {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
 
-.hotels-list a:nth-child(2n) {
+.booking {
   display: table-cell;
   width: 140px;
   height: 25px;
@@ -290,11 +313,11 @@ a.active-icon path {
   background-color: #766357;
 }
 
-.hotels-list a:nth-child(2n):hover {
+.booking:hover {
   background-color: #604e43;
 }
 
-.hotels-list a:nth-child(2n):active {
+.booking:active {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -311,29 +334,32 @@ a.active-icon path {
 }
 
 /* Stars */
-.four-stars {  
-  width: 72px;
+.stars {
   height: 17px;
-
   background-image:  url("../img/star.svg");
+}
+.five-stars {
+  width: 90px; 
+}
+
+.four-stars {  
+  width: 72px; 
 }
 
 .three-stars {
-  width: 54px;
-  height: 17px;
-
-  background-image:  url("../img/star.svg");
+  width: 54px;  
 }
 
 .two-stars {
-  width: 36px;
-  height: 17px;
+  width: 36px;  
+}
 
-  background-image:  url("../img/star.svg");
+.one-stars {
+  width: 18px;  
 }
 
 /* Index Form */
-.book-btn {
+.btn {
   font: inherit;
 
   font-weight: 700;
@@ -342,8 +368,11 @@ a.active-icon path {
   vertical-align: middle;
   text-transform: uppercase;
 
-  background-color: #766357;
   border: none;
+}
+
+.book-btn { 
+  background-color: #766357;  
 }
 
 .book-btn:hover {  
@@ -358,17 +387,8 @@ a.active-icon path {
 
 /* Index Form CSS code here */
 
-.search-btn {
-  font: inherit;
-
-  font-weight: 700;
-  text-align: center;
-  color: #ffffff;
-  vertical-align: middle;
-  text-transform: uppercase;
-
-  background-color: #81b3d2;
-  border: none;
+.search-btn {  
+  background-color: #81b3d2;  
 }
 
 .search-btn:hover {
@@ -408,7 +428,7 @@ a.active-icon path {
   background-color: #5496bd;
 }
 
-.social-twitter::before {
+.social::before {
   content: "";
   display: block;
   position: absolute;
@@ -416,38 +436,25 @@ a.active-icon path {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;    
-  background-image: url("../img/twitter.svg");
+  z-index: 1;
   background-position: center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
+}
+
+.social-twitter::before {
+  content: "";  
+  background-image: url("../img/twitter.svg");
+    
 }
 
 .social-facebook::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;  
-  background-image: url("../img/fb-icon.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  content: "";  
+  background-image: url("../img/fb-icon.svg");  
 }
 
 .social-youtube::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;  
-  background-image: url("../img/youtube.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  content: "";  
+  background-image: url("../img/youtube.svg");  
 }
 
 .social-twitter:active::before,
