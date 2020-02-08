@@ -5,7 +5,7 @@ body {
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 14px;
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
@@ -103,8 +103,64 @@ a.active-page {
   font-weight: 700;
 }
 
-.hotels-list {
+.hotels-results {
   background-color: #ffffff;
+}
+
+.hotels-list {
+  list-style: none;
+}
+
+/* Advantages Section */
+.advantages-list {
+  background-color: #ffffff;
+}
+
+.advantages {
+  list-style: none;
+}
+
+.sights {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.other-advantages {
+  color: #000000;
+
+  list-style: none;
+  
+  background-color: #ffffff;
+}
+
+.town {
+  background-image: url("../img/background-for-list1.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.devil-bridge {
+  background-image: url("../img/background-for-list2.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.accommodation {
+  background-image: url("../img/icon-1.svg");  
+}
+
+.cuisine {
+  background-image: url("../img/icon-2.svg");  
+}
+
+.souvenirs {
+  background-image: url("../img/icon-3.svg");  
 }
 
 /* Filter Section */
@@ -151,7 +207,7 @@ a.active-page {
 
 .label {  
   margin-left: 19px;
-  margin-bottom: 14px;
+  margin-bottom: 7px;
   display: inline-block;
   height: 23px;   
   vertical-align: middle;
@@ -276,6 +332,18 @@ a.active-icon path {
 }
 
 /* Links inside the Section */
+.hotel-name {  
+  color: #000000;
+}
+
+.hotel-name:hover {
+  color: #81b3d2;
+}
+
+.hotel-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .more-info {
   display: table-cell;
   width: 110px;
@@ -383,9 +451,142 @@ a.active-icon path {
   background-color: #503e33;  
 }
 
-/* Index Form CSS code here */
+/* Index Form Itself*/
+.index-form {
+  padding: 55px;
+  width: 458px;
+  height: 285px;
 
-.search-btn {  
+  font-weight: 700;  
+
+  background-color: #ffffff;  
+}
+
+/* Input Styles */
+.form-item {
+  position: relative;
+  height: 38px;  
+  margin-bottom: 29px; 
+}
+
+.form-item label::before {  /* Выглядит как костыль */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.form-item input {
+  font: inherit; 
+  text-transform: uppercase;
+
+  position: absolute;
+  padding: 13px;
+  height: 12px;
+  width: 320px;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.form-item input:focus {  
+  background-color: transparent;
+  height: 8px; 
+
+  border: 2px solid #e5e5e5;
+  
+  outline: none;
+}
+
+.form-item input:hover {  
+  background-color: #ebebeb;  
+}
+
+.checkin {
+  margin-left: 21px;
+}
+
+.checkout {
+  margin-left: 17px;
+}
+
+/* Adults & Kids Inputs Style */
+.form-item .select-input {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 38px;
+
+  text-align: center;
+}
+
+.adults-item {
+  display: inline-block;
+
+  width: 223px;
+}
+
+.kid-item {
+  display: inline-block;
+  width: 175px; 
+  
+  margin-left: 54px;
+}
+
+/* Form Buttons */
+.form-btn {
+  position: absolute;  
+  height: 38px;
+  width: 38px;
+
+  color: #a9a9a9;
+  background-color: #f2f2f2;  
+}
+
+.calender {
+  right: 0;
+  
+  background-color: transparent;
+}
+
+.add {  
+  right: 0;
+}
+
+.remove {  
+  right: 76px;
+}
+
+.form-btn > svg {
+  vertical-align: middle;
+}
+
+.form-btn > svg > path {
+  fill: #cacaca;
+}
+
+.form-btn:hover {  
+  color: #000000;    
+}
+
+.form-btn:hover > svg > path {  
+  fill: #000000;    
+}
+
+.form-btn:active {  
+  color: #81b3d2;     
+}
+
+.form-btn:active > svg > path {  
+  fill: #81b3d2;   
+}
+
+.search-btn {
+  margin-top: 23px;
+  
+  width: 456px;
+  height: 58px;
+
   background-color: #81b3d2;  
 }
 
