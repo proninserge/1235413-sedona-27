@@ -31,17 +31,15 @@
       </nav>      
     </header>
 
-    <main class="main-content">      
-      <section class="container index-greeting">
-        <div class="banner">
-          <img src="img/welcome.svg" height="353" width="459" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks">
-        </div>
-        <div class="index-mask">
-          <h1 class="important-content">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>        
-          <p>
-            Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-          </p>
-        </div>
+    <main class="main-content">
+      <div class="container banner">
+        <img src="img/welcome.svg" height="353" width="459" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks">
+      </div>            
+      <section class="container index-mask">       
+        <h1 class="important-content">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>        
+        <p>
+          Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+        </p>       
       </section>
       <section class="advantages-list">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -147,21 +145,21 @@
                 </svg>
               </button>
             </div>
-            <div class="flex">
+            <div class="selection-field">
               <div class="form-item adults-item"> 
-                <label for="adults">Взрослые:</label>              
+                <label for="adults">Взрослые:</label>
+                <button class="btn form-btn" type="button" aria-label="Убрать">-</button>               
                 <input class="select-input" type="text" id="adults" value="2" name="adult-number">
-                <button class="btn form-btn add" type="button" aria-label="Добавить">+</button>
-                <button class="btn form-btn remove" type="button" aria-label="Убрать">-</button> 
+                <button class="btn form-btn" type="button" aria-label="Добавить">+</button>                
               </div>
               <div class="form-item kid-item">         
-                <label for="kids">Дети:</label>              
+                <label for="kids">Дети:</label>
+                <button class="btn form-btn" type="button" aria-label="Убрать">-</button>               
                 <input class="select-input" type="text" id="kids" value="0" name="kid-number">
-                <button class="btn form-btn add" type="button" aria-label="Добавить">+</button>
-                <button class="btn form-btn remove" type="button" aria-label="Убрать">-</button>   
+                <button class="btn form-btn" type="button" aria-label="Добавить">+</button>                  
               </div>
             </div> 
-            <button class="btn search-btn important-content" type="submit">Найти</button>
+            <button class="btn search-btn" type="submit">Найти</button>
           </form>
         </div>                 
       </section>

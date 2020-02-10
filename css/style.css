@@ -37,7 +37,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 
-  background-color: #ffffff;
+  background-color: #ffffff;  
 }
 
 .important-content {
@@ -74,43 +74,38 @@ a.active-page {
 }
 
 /* Main */
-.index-greeting {
-  height: 773px;
+.banner { 
+  position: relative;
+   
+  height: 432px;
+  padding-top: 132px;
 
   background-image: url("../img/top-background-photo.jpg");
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }
 
-.banner {
-  position: relative;
-  top: 132px;  
-}
-
-.banner::after {
+.banner::before {
   content: "";
-  position: absolute;
+    
+  position: absolute; 
+
   width: 1200px;
   height: 59px;
-  top: 369px;
   left: 0;
+  bottom: 0;   
   
   background-image: url("../img/intro-mask.svg");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;  
 }
 
-.index-mask {
-  position: relative;
-  top: 197px;
+.index-mask {  
   box-sizing: border-box;
 
   height: 216px;
-  padding-top: 58px;
+  padding-top: 62px;
   padding-left: 355px;
-  padding-right: 355px;
-  padding-bottom: 53px;
-
-  background-color: #ffffff;
+  padding-right: 355px;  
 }
 
 .interested {
@@ -119,6 +114,7 @@ a.active-page {
   font-weight: 700;
 
   margin-bottom: 33px;
+  
 }
 
 .hotels-results {
@@ -537,7 +533,7 @@ a.active-icon path {
 }
 
 /* Adults & Kids Inputs Style */
-.flex {
+.selection-field {
   display: flex;
   flex-direction: row;
   justify-content: space-between;  
@@ -546,7 +542,6 @@ a.active-icon path {
 .form-item .select-input {   
   width: 38px;
   height: 38px;
-  order: 2; 
 
   text-align: center;
 }
@@ -564,7 +559,8 @@ a.active-icon path {
 }
 
 /* Form Buttons */
-.form-btn {  
+.form-btn { 
+  position: relative;   
   height: 38px;
   width: 38px;
 
@@ -572,17 +568,11 @@ a.active-icon path {
   background-color: #f2f2f2;  
 }
 
-.add {
-  order: 3;
-}
-
-.remove {  
-  order: 1;  
-}
-
 .form-btn > svg {
-  margin:0;
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-btn > svg > path {
