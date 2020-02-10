@@ -5,7 +5,7 @@ body {
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 24px;
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
@@ -31,6 +31,13 @@ a {
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
 }
 
 .important-content {
@@ -67,7 +74,9 @@ a.active-page {
 }
 
 /* Main */
-.index-greeting {  
+.index-greeting {
+  height: 773px;
+
   background-image: url("../img/top-background-photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
@@ -75,6 +84,7 @@ a.active-page {
 
 .banner {
   position: relative;
+  top: 132px;  
 }
 
 .banner::after {
@@ -82,18 +92,24 @@ a.active-page {
   position: absolute;
   width: 1200px;
   height: 59px;
-  top: 300px;
-  left: 227px;
+  top: 369px;
+  left: 0;
   
   background-image: url("../img/intro-mask.svg");
   background-repeat: no-repeat;
 }
 
 .index-mask {
-  background-color: #ffffff;
-}
+  position: relative;
+  top: 197px;
+  box-sizing: border-box;
 
-.open-form {
+  height: 216px;
+  padding-top: 58px;
+  padding-left: 355px;
+  padding-right: 355px;
+  padding-bottom: 53px;
+
   background-color: #ffffff;
 }
 
@@ -101,6 +117,8 @@ a.active-page {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+
+  margin-bottom: 33px;
 }
 
 .hotels-results {
@@ -207,7 +225,7 @@ a.active-page {
 
 .label {  
   margin-left: 19px;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
   display: inline-block;
   height: 23px;   
   vertical-align: middle;
@@ -427,7 +445,8 @@ a.active-icon path {
 /* Index Form */
 .btn {
   font: inherit;
-
+  font-size: 21px;
+  line-height: 26px;
   font-weight: 700;
   text-align: center;
   color: #ffffff;
@@ -437,8 +456,12 @@ a.active-icon path {
   border: none;
 }
 
-.book-btn { 
-  background-color: #766357;  
+.book-btn {
+  height: 86px;
+  width: 566px;
+  margin-top: 47px;
+  
+  background-color: #766357;
 }
 
 .book-btn:hover {  
@@ -451,11 +474,24 @@ a.active-icon path {
   background-color: #503e33;  
 }
 
+.form-section {
+  position: relative;
+}
+
+.form-window {
+  position: absolute;
+  display: block;
+
+  left: 317px;
+}
+
 /* Index Form Itself*/
 .index-form {
+  display: flex;
+  flex-direction: column;  
+  
   padding: 55px;
-  width: 458px;
-  height: 285px;
+  width: 456px;  
 
   font-weight: 700;  
 
@@ -464,25 +500,26 @@ a.active-icon path {
 
 /* Input Styles */
 .form-item {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   height: 38px;  
-  margin-bottom: 29px; 
+  margin-bottom: 29px;  
 }
 
-.form-item label::before {  /* Выглядит как костыль */
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+.form-item label {
+  width: 112px;
 }
 
 .form-item input {
   font: inherit; 
   text-transform: uppercase;
 
-  position: absolute;
+  box-sizing: border-box;
+
   padding: 13px;
-  height: 12px;
+  height: 100%;
   width: 320px;
 
   background-color: #f2f2f2;
@@ -490,11 +527,8 @@ a.active-icon path {
 }
 
 .form-item input:focus {  
-  background-color: transparent;
-  height: 8px; 
-
-  border: 2px solid #e5e5e5;
-  
+  background-color: transparent;  
+  border: 2px solid #e5e5e5;  
   outline: none;
 }
 
@@ -502,40 +536,35 @@ a.active-icon path {
   background-color: #ebebeb;  
 }
 
-.checkin {
-  margin-left: 21px;
-}
-
-.checkout {
-  margin-left: 17px;
-}
-
 /* Adults & Kids Inputs Style */
-.form-item .select-input {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  right: 38px;
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+}
+
+.form-item .select-input {   
+  width: 38px;
+  height: 38px;
+  order: 2; 
 
   text-align: center;
 }
 
-.adults-item {
-  display: inline-block;
-
-  width: 223px;
+.adults-item {  
+  width: 221px;  
 }
 
-.kid-item {
-  display: inline-block;
-  width: 175px; 
-  
-  margin-left: 54px;
+.kid-item {  
+  width: 175px;   
+}
+
+.kid-item label {
+  width: 65px;
 }
 
 /* Form Buttons */
-.form-btn {
-  position: absolute;  
+.form-btn {  
   height: 38px;
   width: 38px;
 
@@ -543,21 +572,16 @@ a.active-icon path {
   background-color: #f2f2f2;  
 }
 
-.calender {
-  right: 0;
-  
-  background-color: transparent;
-}
-
-.add {  
-  right: 0;
+.add {
+  order: 3;
 }
 
 .remove {  
-  right: 76px;
+  order: 1;  
 }
 
 .form-btn > svg {
+  margin:0;
   vertical-align: middle;
 }
 
@@ -582,9 +606,8 @@ a.active-icon path {
 }
 
 .search-btn {
-  margin-top: 23px;
+  margin-top: 25px;  
   
-  width: 456px;
   height: 58px;
 
   background-color: #81b3d2;  
