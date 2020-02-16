@@ -8,7 +8,8 @@
     <title>Седона, забронировать отель, отдых, незабываемые ощущения</title>
   </head>
   <body>
-    <header class="header aligner">
+  <div class="main-content">
+    <header class="header">
       <a class="logo">
         <img src="img/logo-sedona.svg" height="71" width="140" alt="Логотип City of Sedona">
       </a>
@@ -31,11 +32,11 @@
       </nav>      
     </header>
 
-    <main class="main-content">
+    <main>
       <div class="container banner">
-        <img src="img/welcome.svg" height="353" width="459" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks">
+        <img src="img/welcome.svg" height="352" width="459" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks">
       </div>            
-      <section class="container index-mask">       
+      <section class="index-mask">       
         <h1 class="important-content">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>        
         <p class="reasons">
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
@@ -45,29 +46,31 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <ol class="advantages">
           <li class="sights town">
+          <div class="sedona-town">
             <h3 class="important-content">
               Настоящий городок
             </h3>
-            <p>— №1 —</p>
-            <p>
-              Седона - не аттракцион для туристов, там течет своя жизнь
+            <p class="number">— №1 —</p>
+            <p class="description">
+              Седона — не аттракцион для туристов, там течет своя жизнь
             </p>
+          </div>
             <ul class="other-advantages">
-              <li class="icon accommodation">
-                <h4 class="important-content">Жилье</h4>
-                <p>
+              <li class="misc accommodation">
+                <h4 class="important-content">Жильё</h4>
+                <p class="description">
                   Рекомендуем пожить в настоящем мотеле, всё как в кино!
                 </p>
               </li>
-              <li class="icon cuisine">
+              <li class="misc cuisine">
                 <h4 class="important-content">Еда</h4>
-                <p>
+                <p class="description">
                   Всегда заказывайте фирменный бургер, вы не разочаруетесь!
                 </p>
               </li>
-              <li class="icon souvenirs">
+              <li class="misc souvenirs">
                 <h4 class="important-content">Сувениры</h4>
-                <p>
+                <p class="description">
                   Не только китайского, но и местного производства!
                 </p>
               </li>
@@ -77,17 +80,18 @@
             <h3 class="important-content">
               Там есть Мост дьявола
             </h3>
-            <p>— №2 —</p>
-            <p>
+            <p class="number">— №2 —</p>
+            <p class="description">
               Да, по нему можно пройти! Если конечно вы осмелитесь
             </p>
           </li>
+          <div class="more-advantages">
           <li>
             <h3 class="important-content">
               Небольшая площадь
             </h3>
-            <p>— №3 —</p>
-            <p>
+            <p class="number">— №3 —</p>
+            <p class="description">
               Все достопримечательности находятся очень близко
             </p>
           </li>
@@ -95,20 +99,21 @@
             <h3 class="important-content">
               Красивая дорога
             </h3>
-            <p>— №4 —</p>
-            <p>
+            <p class="number">— №4 —</p>
+            <p class="description">
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
-          <li>
+          <li class="fifth-description">
             <h3 class="important-content">
               Мало туристов
             </h3>
-            <p>— №5 —</p>
-            <p>
+            <p class="number">— №5 —</p>
+            <p class="description">
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
+          </div>
         </ol>
       </section>
       <section class="form-section">
@@ -169,8 +174,8 @@
       </section>
     </main>
 
-    <footer class="footer aligner">
-      <div>
+    <footer class="footer">
+      <div class="contacts">
         <p class="hashtag important-content">#visitsedona</p>
         <a class="important-content" href="tel:84956660266">Тел: +7(495) 666-02-66</a>
       </div>      
@@ -205,5 +210,6 @@
         </a>
       </div>
     </footer>
+  </div>
   </body>
 </html>

@@ -8,7 +8,8 @@
     <title>Седона, забронировать отель, отдых, незабываемые ощущения</title>
   </head>
   <body>
-    <header class="header aligner">
+  <div class="main-content">
+    <header class="header">
       <a class="logo" href="index.html">
         <img src="img/logo-sedona.svg" height="71" width="140" alt="Логотип City of Sedona">
       </a>
@@ -31,13 +32,13 @@
       </nav>
     </header>
 
-    <main class="main-content">
+    <main>
       <h1 class="visually-hidden">Отели</h1>
       <section class="filter-section">
         <h2 class="visually-hidden">Фильтры</h2>
         <div class="filters">      
           <form class="selection-form" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset class="fieldset">
               <legend class="legend" >Инфраструктура:</legend>
               <ul class="filter-list">
                 <li>                
@@ -69,7 +70,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="lodging">
+            <fieldset class="fieldset lodging">
               <legend class="legend">Тип жилья:</legend>
               <ul class="filter-list">
                 <li>                
@@ -102,7 +103,7 @@
               </ul>
             </fieldset>
             <div class="price-selection">
-              <fieldset>
+              <fieldset class="fieldset">
                 <legend class="legend">Стоимость в сутки (Р):</legend>
                 <ul class="filter-list cost-range">
                   <li class="cost-item">
@@ -150,12 +151,12 @@
         <h2 class="visually-hidden">Результаты поиска</h2>
         <ul class="hotels-list">
           <li>
+            <img src="img/hotel.jpg" height="90" width="135" alt="Отель Amara Resort & Spa">
             <h3 class="important-content">
               <a class="hotel-name" href="">
                 Amara Resort & Spa
               </a>
             </h3>
-            <img src="img/hotel.jpg" height="90" width="135" alt="Отель Amara Resort & Spa">
             <p>Гостиница</p>
             <p>От 4000 р.</p> 
             <a class="hotel-link more-info" href="#">Подробнее</a>
@@ -164,12 +165,12 @@
             <p class="rating">Рейтинг: 8,5</p>
           </li>
           <li>
+            <img src="img/motel.jpg" height="90" width="135" alt="Мотель Desert Quail Inn">
             <h3 class="important-content">
               <a class="hotel-name" href="">
                 Desert Quail Inn
               </a>
             </h3>
-            <img src="img/motel.jpg" height="90" width="135" alt="Мотель Desert Quail Inn">
             <p>Мотель</p>
             <p>От 3000 р.</p> 
             <a class="hotel-link more-info" href="#">Подробнее</a>
@@ -178,12 +179,12 @@
             <p class="rating">Рейтинг: 8,9</p>
           </li>
           <li>
+            <img src="img/apartment.jpg" height="90" width="135" alt="Апартаменты Villas at Poco Diablo">
             <h3 class="important-content">
               <a class="hotel-name" href="">
                 Villas at Poco Diablo
               </a>
             </h3>
-            <img src="img/apartment.jpg" height="90" width="135" alt="Апартаменты Villas at Poco Diablo">
             <p>Апартаменты</p>
             <p>От 2000 р.</p> 
             <a class="hotel-link more-info" href="#">Подробнее</a>
@@ -195,8 +196,8 @@
       </section>        
     </main>
 
-   <footer class="footer aligner">
-      <div>
+   <footer class="footer">
+      <div class="contacts">
         <p class="hashtag important-content">#visitsedona</p>
         <a class="important-content" href="tel:84956660266">Тел: +7(495) 666-02-66</a>
       </div>      
@@ -231,5 +232,6 @@
         </a>
       </div>
     </footer>
+  </div>
   </body>
 </html>
