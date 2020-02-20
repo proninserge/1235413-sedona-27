@@ -186,15 +186,19 @@ h1.important-content {
 
 .hotels-list li {
   box-sizing: border-box;
-  border-bottom: 2px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 
-  padding: 30px;
+  display: flex;
+  align-items: center;
+
+  padding-top: 27px;
+  padding-bottom: 29px;
   padding-left: 72px;
   padding-right: 72px;
 }
 
 .hotels-list li:first-child {
-  border-top: 2px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
 
 /* Advantages Section */
@@ -337,8 +341,8 @@ li.fifth-description {
 .filter-list {  
   padding: 0;
   margin: 0;
-  margin-bottom: 31px;
-  
+  margin-bottom: 30px;
+
   list-style: none;
 }
 
@@ -355,7 +359,7 @@ li.fifth-description {
 }
 
 .filters {
-  padding-top: 28px;
+  padding-top: 26px;
   padding-left: 72px;
   padding-right: 72px;
 
@@ -414,7 +418,7 @@ li.fifth-description {
 }
 
 .legend {
-  margin-bottom: 25px;
+  margin-bottom: 22px;/*20*/
 
   font-size: 16px;
   font-weight: 700;
@@ -439,7 +443,7 @@ li.fifth-description {
 .filter-list li {
   display: flex;
   
-  margin-bottom: 23px;
+  margin-bottom: 22px; /*23*/
 }
 
 .label {
@@ -527,9 +531,11 @@ li.fifth-description {
 .sorting {
   text-align: center;
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
 
-  padding: 10px;
+  padding-top: 8px;
+  padding-bottom: 9px;
   padding-left: 72px;
   padding-right: 72px;
   
@@ -582,10 +588,6 @@ a.active-sort {
   margin-left: 503px;
 }
 
-.sort-icon:last-of-type {
-  margin-left: 10px;
-}
-
 .sort-icon path {
   fill: #cacaca;
 }
@@ -596,6 +598,9 @@ a.active-sort {
 
 .sort-icon:active path {
   fill: #81b3d2;
+}
+a.active-icon {
+  margin-left: 12px;
 }
 
 a.active-icon path {
@@ -612,13 +617,12 @@ a.active-icon path {
 }
 
 .hotel-link {
-  display: table-cell;
-  height: 25px;
+  display: block;
 
   font-weight: 700;
   color: #ffffff;
   text-align: center;
-  vertical-align: middle; 
+  line-height: 27px;
 }
 
 .more-info {
@@ -649,12 +653,60 @@ a.active-icon path {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.rating {
-  display: table-cell;
+/* Search Results */
+.hotels-list img {
+  margin-top: 3px;
+}
+
+h3.search-result {
+  width: 100%;
+}
+
+.full-info {
+  margin-left: 30px;
+}
+
+.rating-info {
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  height: 90px;
+}
+
+.info-line-one,
+.info-line-two {
+  display: flex;
+}
+
+.info-line-one {
+  margin-top: 10px;
+}
+
+.info-line-two {
+  margin-top: 12px;
+}
+
+.type,
+.price {
+  margin: 0;
   width: 110px;
-  height: 27px;
+}
+
+.price,
+.booking {
+  margin-left: 7px;
+}
+
+.rating {
+  width: 110px;
+  line-height: 27px;
   text-align: center;
-  vertical-align: middle;
+  
+  margin: 0;
 
   color: #666666;
   background-color: #f2f2f2;
@@ -662,27 +714,29 @@ a.active-icon path {
 
 /* Stars */
 .stars {
+  margin: 0;
   height: 17px;
   background-image:  url("../img/star.svg");
+  background-repeat: space;
 }
 .five-stars {
-  width: 90px; 
+  width: 108px; 
 }
 
 .four-stars {  
-  width: 72px; 
+  width: 90px;
 }
 
 .three-stars {
-  width: 54px;  
+  width: 66px;
 }
 
 .two-stars {
-  width: 36px;  
+  width: 41px;
 }
 
 .one-star {
-  width: 18px;  
+  width: 18px;
 }
 
 /* Index Form */
