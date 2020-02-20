@@ -217,8 +217,7 @@ h1.important-content {
   list-style: none;
 }
 
-h3.important-content,
-h4.important-content {
+.page-titles {
   width: 151px;  
   line-height: 21px;
   margin: auto;  
@@ -658,7 +657,7 @@ a.active-icon path {
   margin-top: 3px;
 }
 
-h3.search-result {
+.search-result {
   width: 100%;
 }
 
