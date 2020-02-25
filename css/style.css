@@ -37,6 +37,7 @@ a {
 }
 
 .main-content {
+  position: relative;
   background-color: #ffffff;
   
   width: 1200px;
@@ -52,7 +53,7 @@ a {
 }
 
 /* Header */
-.header {  
+.header {
   background-color: #ffffff;
 }
 
@@ -68,6 +69,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   
   list-style: none;
 
@@ -90,7 +92,7 @@ a {
   text-align: right;
 }
 
-.site-navigation li:last-child {
+.site-navigation li:nth-child(4n) {
   text-align: right;
 }
 
@@ -117,8 +119,8 @@ a.active-page {
   position: relative;
    
   height: 432px;
-  padding-top: 76px; /*132px;*/
-
+  padding-top: 76px;
+  
   background-image: url("../img/top-background-photo.jpg");
   background-position: cover;
   background-position: 0 -56px;
@@ -144,7 +146,7 @@ a.active-page {
   
   text-align: center;
 
-  padding-top: 59px;/*61*/
+  padding-top: 59px;
   padding-left: 356px;
   padding-right: 356px;
   padding-bottom: 51px;
@@ -189,10 +191,10 @@ h1.important-content {
   border-bottom: 1px solid #e5e5e5;
 
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 
-  padding-top: 27px;
-  padding-bottom: 29px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   padding-left: 72px;
   padding-right: 72px;
 }
@@ -208,6 +210,7 @@ h1.important-content {
 
 .advantages {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   
   margin: 0;
@@ -231,6 +234,7 @@ h1.important-content {
 
 .other-advantages {
   display: flex;
+  flex-wrap: wrap;
 
   padding: 0;
 
@@ -315,6 +319,7 @@ h1.important-content {
 
 .more-advantages {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .more-advantages li {
@@ -340,13 +345,13 @@ li.fifth-description {
 .filter-list {  
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
-
+  
   list-style: none;
 }
 
 .selection-form {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .fieldset {
@@ -361,6 +366,7 @@ li.fifth-description {
   padding-top: 26px;
   padding-left: 72px;
   padding-right: 72px;
+  padding-bottom: 30px;
 
   background-image: url("../img/filter-background.jpg");
   background-position: 0 -56px;
@@ -373,20 +379,16 @@ li.fifth-description {
 
 .price-selection {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  height: 152px;
+  
   margin-left: auto;
-}
-
-.price-selection fieldset {
-  margin-left: 6px;
+  padding-left: 6px;
 }
 
 .cost-range {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   
   position: relative;
@@ -405,19 +407,18 @@ li.fifth-description {
   border-left: 2px solid #ffffff;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 } 
 
 .cost-range .cost-item {
   margin: 0;
-
-  width: 161px;
-  
-  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .legend {
-  margin-bottom: 22px;/*20*/
+  margin-bottom: 22px;
 
   font-size: 16px;
   font-weight: 700;
@@ -425,42 +426,85 @@ li.fifth-description {
   color: #ffffff;
 }
 
-/* Checkbox Styles */
-.checkbox { 
-  -webkit-appearance: none;
-  -moz-appearance: none;  
-  -ms-appearance: none;
-  appearance: none;
-  -ms-transform: scale(1.3); 
-  -moz-transform: scale(1.3); 
-  -webkit-transform: scale(1.3); /*в порядке убывания*/
-  -o-transform: scale(1.3); 
-  transform: scale(1.3);
-  padding: 10px;
+.price-per-day {
+  margin-bottom: 9px;
 }
 
-.filter-list li {
-  display: flex;
-  
-  margin-bottom: 22px; /*23*/
+.label-cost-from {
+  margin-left: 23px;
+}
+
+.price-selection .fieldset {
+  margin-bottom: 20px;
+}
+
+/* String Here */
+.range-controls {
+  position: relative;
+
+  margin-bottom: 31px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+/* Checkbox Styles */
+.checkbox:focus + .checkbox-svg {
+  outline: 2px solid #0000ff;
+}
+
+.filter-list li {  
+  margin-bottom: 22px;
+}
+
+.filter-list li:last-child {
+  margin-bottom: 0;
 }
 
 .label {
-  margin-left: 12px;
+  display: flex;
+  flex-wrap: wrap;
 
   color: #ffffff;   
 }
 
-.checkbox {
-  position: absolute;
-
-  margin-top: 2px;
-  margin-left: 2px;
+.checkbox-svg {
+  margin-right: 12px;
 }
 
 .label-cost {
-  margin-right: 5px;
-  
   color: #ffffff;
 }
 
@@ -499,13 +543,15 @@ li.fifth-description {
   vertical-align: middle;
   text-transform: uppercase;
 
-  width: 133px;
+  width: 138px;
   padding-top: 4px;
   padding-bottom: 4px;
   
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
+
+  margin-right: 10px;
 }
 
 .filter-button:hover {
@@ -519,8 +565,7 @@ li.fifth-description {
   color: #ffffff;
   text-transform: uppercase;
 
-  width: 30px;
-  height: 22px;
+  width: 40px;
 
   background-color: transparent;
   border: none;
@@ -530,6 +575,7 @@ li.fifth-description {
 .sorting {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
 
@@ -543,6 +589,7 @@ li.fifth-description {
 
 .sorting-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
 
@@ -554,7 +601,7 @@ li.fifth-description {
 }
 
 .sort-type {
-  margin-left: 49px;
+  margin-left: 47px;
 
   font-size: 12px;
   line-height: 18px;
@@ -584,7 +631,7 @@ a.active-sort {
 }
 
 .sort-icon:first-of-type {
-  margin-left: 503px;
+  margin-left: auto;
 }
 
 .sort-icon path {
@@ -599,7 +646,7 @@ a.active-sort {
   fill: #81b3d2;
 }
 a.active-icon {
-  margin-left: 12px;
+  margin-left: 14px;
 }
 
 a.active-icon path {
@@ -654,7 +701,8 @@ a.active-icon path {
 
 /* Search Results */
 .hotels-list img {
-  margin-top: 3px;
+  width: 135px;
+  height: 90px;
 }
 
 .search-result {
@@ -662,6 +710,7 @@ a.active-icon path {
 }
 
 .full-info {
+  margin-top: -3px;
   margin-left: 30px;
 }
 
@@ -669,6 +718,7 @@ a.active-icon path {
   margin-left: auto;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
@@ -679,10 +729,11 @@ a.active-icon path {
 .info-line-one,
 .info-line-two {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .info-line-one {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 .info-line-two {
@@ -723,7 +774,7 @@ a.active-icon path {
 }
 
 .four-stars {  
-  width: 90px;
+  width: 89px;
 }
 
 .three-stars {
@@ -755,7 +806,7 @@ a.active-icon path {
 .book-btn {
   height: 86px;
   width: 566px;
-  margin-top: 34px;/*47*/
+  margin-top: 34px;
   
   background-color: #766357;
 }
@@ -792,11 +843,11 @@ a.active-icon path {
   flex-direction: column;  
   
   padding: 55px;
-  width: 456px;  
-
-  font-weight: 700;  
-
-  background-color: #ffffff;  
+  width: 456px;
+  
+  font-weight: 700;
+  
+  background-color: #ffffff;
 }
 
 /* Input Styles */
@@ -809,7 +860,7 @@ a.active-icon path {
 }
 
 .form-item label {
-  width: 112px;
+  width: 115px;
 }
 
 .form-item input {
@@ -850,11 +901,11 @@ a.active-icon path {
 }
 
 .adults-item {  
-  width: 221px;  
+  width: 221px;
 }
 
 .kid-item {  
-  width: 175px;   
+  width: 175px;
 }
 
 .kid-item label {
@@ -930,11 +981,12 @@ a.active-icon path {
   width: 1200px;
   
   display: flex;
-  /*justify-content: space-around;*/
+  flex-wrap: wrap;
 
   box-sizing: border-box;
   height: 120px;
   padding-left: 132px;
+  padding-right: 100px;
   padding-top: 36px;
   padding-bottom: 32px;
 
@@ -950,9 +1002,9 @@ a.active-icon path {
   margin: 0;
   margin-left: 169px;
   padding: 0;
-  width: 150px;
-
+  
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   list-style: none;
@@ -963,6 +1015,8 @@ a.active-icon path {
   display: block;
   width: 46px;
   height: 48px;
+
+  margin-right: 6px;
   
   background-color: #81b3d2;
 }
@@ -1010,11 +1064,16 @@ a.active-icon path {
 /* Copyright Logo */
 .copyright-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   
   width: 197px;
-  margin-left: 228px;
+  margin-left: auto;
+}
+
+.copyright-section p {
+  margin: 0;
 }
 
 .copyright > svg {
@@ -1032,6 +1091,6 @@ a.active-icon path {
 }
 
 .copyright:active path,
-.copyright:active rect {  /* Active state does not work in IE */
+.copyright:active rect {
   fill: #bdbbbc;
 } 
