@@ -261,7 +261,7 @@ h1.important-content {
 .sedona-town {
   text-align: center;
   padding-top: 47px;
-  padding-bottom: 62px;
+  padding-bottom: 61px;
   padding-right: 860px;
   padding-left: 60px;
 }
@@ -272,7 +272,7 @@ h1.important-content {
   padding-top: 46px;
   padding-right: 49px;
   padding-left: 848px;
-  padding-bottom: 61px;
+  padding-bottom: 62px;
   
   background-image: url("../img/background-for-list2.jpg");
   background-repeat: no-repeat;
@@ -461,6 +461,8 @@ li.fifth-description {
 .range-toggle {
   position: absolute;
   top: -9px;
+
+  padding: 2px;
 
   width: 4px;
   height: 4px;
@@ -830,12 +832,15 @@ a.active-icon path {
 .form-window {
   position: absolute;
   display: block;
+  z-index: 2;
 
   left: 50%;
   transform: translateX(-50%);
 
   box-shadow: 0px 5px 12px 0 rgba(0, 1, 1, 0.2);
 }
+
+/* Animations */
 
 /* Index Form Itself*/
 .index-form {
@@ -854,13 +859,14 @@ a.active-icon path {
 .form-item {
   display: flex;
   align-items: center;
+  position: relative;
 
   height: 38px;  
   margin-bottom: 29px;  
 }
 
 .form-item label {
-  width: 115px;
+  width: 110px;
 }
 
 .form-item input {
@@ -871,13 +877,15 @@ a.active-icon path {
 
   padding: 13px;
   height: 100%;
-  width: 320px;
+  flex-grow: 1;
 
   background-color: #f2f2f2;
   border: none;
 }
 
-.form-item input:focus {  
+.form-item input:focus {
+  padding: 11px;
+
   background-color: transparent;  
   border: 2px solid #e5e5e5;  
   outline: none;
@@ -900,26 +908,24 @@ a.active-icon path {
   text-align: center;
 }
 
-.adults-item {  
-  width: 221px;
-}
-
-.kid-item {  
-  width: 175px;
-}
-
 .kid-item label {
   width: 65px;
 }
 
 /* Form Buttons */
 .form-btn { 
-  position: relative;   
   height: 38px;
   width: 38px;
-
+  
   color: #a9a9a9;
   background-color: #f2f2f2;  
+}
+
+.calender {
+  position: absolute;
+  background: transparent;
+  right: 0;
+  top: 0;
 }
 
 .form-btn > svg {
@@ -968,7 +974,14 @@ a.active-icon path {
 }
 
 .map {
+  position: relative;
   line-height: 0;
+}
+
+.interactive-map {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* Footer */
