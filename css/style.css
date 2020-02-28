@@ -802,7 +802,8 @@ a.active-icon path {
 }
 
 .book-btn {
-  height: 86px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 566px;
   margin-top: 33px;
   
@@ -972,9 +973,10 @@ a.active-icon path {
 }
 
 .search-btn {
-  margin-top: 25px;  
-  
-  height: 58px;
+  margin-top: 26px;  
+
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   background-color: #81b3d2;  
 }
@@ -995,7 +997,7 @@ a.active-icon path {
   overflow: hidden;
 }
 
-iframe {
+.interactive-map {
   width: 100%;
   border-width: 0;
 }
