@@ -130,12 +130,14 @@ a.active-page {
 .banner::before {
   content: "";
     
-  position: absolute; 
-
+  position: absolute;
+  
   width: 1200px;
   height: 57px;
   left: 0;
-  bottom: 0;   
+  bottom: 0;
+  
+  line-height: 0;
   
   background-image: url("../img/intro-mask.svg");
   background-repeat: no-repeat;
@@ -205,17 +207,13 @@ h1.important-content {
 
 /* Advantages Section */
 .advantages-list {
-  position: relative;
-  z-index: 4;
-
   background-color: #ffffff;
 }
 
 .advantages {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  
+
   margin: 0;
 
   padding: 0;
@@ -252,7 +250,7 @@ h1.important-content {
 .description {
   line-height: 21px;
   margin: 0;
-  margin-top: 22px;
+  margin-top: 23px;
 }
 
 .town {
@@ -264,7 +262,7 @@ h1.important-content {
 .sedona-town {
   text-align: center;
   padding-top: 47px;
-  padding-bottom: 61px;
+  padding-bottom: 60px;
   padding-right: 860px;
   padding-left: 60px;
 }
@@ -275,7 +273,7 @@ h1.important-content {
   padding-top: 46px;
   padding-right: 49px;
   padding-left: 848px;
-  padding-bottom: 62px;
+  padding-bottom: 61px;
   
   background-image: url("../img/background-for-list2.jpg");
   background-repeat: no-repeat;
@@ -290,7 +288,7 @@ h1.important-content {
   width: 400px;
   padding: 50px;
   padding-top: 160px;
-  padding-bottom: 83px;
+  padding-bottom: 82px;
 
   text-align: center;
   box-sizing: border-box;
@@ -321,11 +319,6 @@ h1.important-content {
 }
 
 .more-advantages {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.more-advantages li {
   width: 400px;
   padding: 65px;
   padding-top: 47px;
@@ -811,7 +804,7 @@ a.active-icon path {
 .book-btn {
   height: 86px;
   width: 566px;
-  margin-top: 34px;
+  margin-top: 33px;
   
   background-color: #766357;
 }
@@ -827,13 +820,6 @@ a.active-icon path {
 }
 
 .form-section {
-  position: relative;
-}
-
-.open-form {
-  position: relative;
-  z-index: 4;
-
   padding-top: 50px;
 
   background-color: #ffffff;
@@ -842,7 +828,7 @@ a.active-icon path {
 .form-window {
   position: absolute;
   display: block;
-  z-index: 1;
+  animation: appear 0.6s;
 
   left: 50%;
   transform: translateX(-50%);
@@ -852,12 +838,6 @@ a.active-icon path {
 
 .window-hide {
   display: none;
-}
-
-.window-show {
-  display: block;
-
-  animation: appear 0.6s;
 }
 
 /* Animation */
@@ -932,7 +912,7 @@ a.active-icon path {
 }
 
 .form-item .select-input {   
-  width: 38px;
+  width: 115px;
   height: 38px;
 
   text-align: center;
@@ -943,18 +923,24 @@ a.active-icon path {
 }
 
 /* Form Buttons */
-.form-btn { 
+.form-btn {
+  position: absolute;
+  background: transparent;
+  
   height: 38px;
   width: 38px;
   
   color: #a9a9a9;
-  background-color: #f2f2f2;  
 }
 
-.calendar {
-  position: absolute;
-  background: transparent;
+.calendar,
+.add {
   right: 0;
+  top: 0;
+}
+
+.remove {
+  right: 78px;
   top: 0;
 }
 
@@ -1006,6 +992,12 @@ a.active-icon path {
 .map {
   position: relative;
   line-height: 0;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  border-width: 0;
 }
 
 .static-map {

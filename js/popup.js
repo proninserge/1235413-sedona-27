@@ -7,18 +7,12 @@ var dateOut = popup.querySelector("[name=checkout-date]");
 var adults = popup.querySelector("[name=adult-number]");
 var kids = popup.querySelector("[name=kid-number]");
 
+popup.classList.add("window-hide");
 
-button.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("window-show");
+button.addEventListener("click", function () {    
     popup.classList.toggle("window-hide");
     dateIn.focus();
 
-    var isHidden = popup.classList.contains("window-hide");
-
-    if (!isHidden) {
-        popup.classList.add("window-show");
-    }
 });
 
 sendForm.addEventListener("click", function (evt) {

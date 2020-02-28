@@ -84,9 +84,8 @@
             <p class="description">
               Да, по нему можно пройти! Если конечно вы осмелитесь
             </p>
-          </li>
-          <div class="more-advantages">
-          <li>
+          </li>          
+          <li class="more-advantages">
             <h3 class="page-titles important-content">
               Небольшая площадь
             </h3>
@@ -95,7 +94,7 @@
               Все достопримечательности находятся очень близко
             </p>
           </li>
-          <li>
+          <li class="more-advantages">
             <h3 class="page-titles important-content">
               Красивая дорога
             </h3>
@@ -104,7 +103,7 @@
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
-          <li class="fifth-description">
+          <li class="more-advantages fifth-description">
             <h3 class="page-titles important-content">
               Мало туристов
             </h3>
@@ -112,12 +111,11 @@
             <p class="description">
               Большинство едет в Гранд Каньон и толпится там
             </p>
-          </li>
-          </div>
+          </li>         
         </ol>
       </section>
       <section class="form-section">
-        <div class="container open-form">
+        <div class="container">
           <h2 class="visually-hidden">Форма поиска</h2>
           <p class="interested">
             Заинтересовались?
@@ -127,7 +125,10 @@
             и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
           <button class="btn book-btn" type="button">Поиск гостиницы в Седоне</button>
-        </div>
+        </div>                
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Карта и поиск гостиницы</h2>
         <div class="form-window">            
           <form class="index-form" method="get" action="https://echo.htmlacademy.ru">
             <div class="form-item">
@@ -153,24 +154,21 @@
             <div class="selection-field">
               <div class="form-item"> 
                 <label for="adults">Взрослые:</label>
-                <button class="btn form-btn" type="button" aria-label="Убрать">-</button>               
+                <button class="btn form-btn remove" type="button" aria-label="Убрать">-</button>               
                 <input class="select-input" type="text" id="adults" value="2" name="adult-number">
-                <button class="btn form-btn" type="button" aria-label="Добавить">+</button>                
+                <button class="btn form-btn add" type="button" aria-label="Добавить">+</button>                
               </div>
               <div class="form-item kid-item">         
                 <label for="kids">Дети:</label>
-                <button class="btn form-btn" type="button" aria-label="Убрать">-</button>               
+                <button class="btn form-btn remove" type="button" aria-label="Убрать">-</button>               
                 <input class="select-input" type="text" id="kids" value="0" name="kid-number">
-                <button class="btn form-btn" type="button" aria-label="Добавить">+</button>                  
+                <button class="btn form-btn add" type="button" aria-label="Добавить">+</button>                  
               </div>
             </div> 
             <button class="btn search-btn" type="submit">Найти</button>
           </form>
-        </div>                 
-      </section>
-      <section class="map">
-        <h2 class="visually-hidden">Карта</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d412492.82652832376!2d-111.88868156128963!3d34.96979615470673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1582737371681!5m2!1sru!2sru" width="100%" height="593" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d412492.82652832376!2d-111.88868156128963!3d34.96979615470673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1582737371681!5m2!1sru!2sru" width="1200" height="593" allowfullscreen=""></iframe>
         <img class="static-map" src="img/map.png" height="593" width="1200" alt="На юг от Флагстафф по 17 шоссе">
       </section>
     </main>
