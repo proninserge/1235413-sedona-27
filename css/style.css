@@ -133,7 +133,7 @@ a.active-page {
   position: absolute;
   
   width: 1200px;
-  height: 57px;
+  height: 56px;
   left: 0;
   bottom: 0;
   
@@ -1036,7 +1036,7 @@ a.active-icon path {
 }
 
 /* Social Hyperlinks */
-.socials {
+.socials-list {
   margin: 0;
   margin-left: 169px;
   padding: 0;
@@ -1048,7 +1048,7 @@ a.active-icon path {
   list-style: none;
 }
 
-.socials a {
+.socials-list a {
   position: relative;
   display: block;
   width: 46px;
@@ -1059,11 +1059,11 @@ a.active-icon path {
   background-color: #81b3d2;
 }
 
-.socials a:hover {
+.socials-list a:hover {
   background-color: #669ec0;
 }
 
-.socials a:active {
+.socials-list a:active {
   background-color: #5496bd;
 }
 
